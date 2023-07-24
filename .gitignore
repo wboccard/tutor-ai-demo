@@ -23,3 +23,7 @@ htmlcov/
 .coverage
 .coverage.*
 *,cover
+
+examples/
+__pycache__/
+static/uploads/*
