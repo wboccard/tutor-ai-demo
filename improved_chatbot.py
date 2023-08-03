@@ -23,6 +23,7 @@ class Chatbot():
         )
         self.speech_config = speech.RecognitionConfig(
             encoding=speech.RecognitionConfig.AudioEncoding.FLAC,
+            # encoding=speech.RecognitionConfig.AudioEncoding.OGG_OPUS,
             language_code="en-US",
             enable_word_confidence=True,
             enable_word_time_offsets=True,
@@ -54,10 +55,11 @@ class Chatbot():
         response = self.text_to_speech_client.synthesize_speech(
             input=synthesis_input, voice=self.voice, audio_config=audio_config
         )
-        with open(os.path.join("static","uploads","output.mp3"), "wb") as out:
-            # Write the response to the output file.
-            out.write(response.audio_content)
-            print('Audio content written to file output.mp3')
+        # with open(os.path.join("static","uploads","output.mp3"), "wb") as out:
+        #     # Write the response to the output file.
+        #     out.write(response.audio_content)
+        #     print('Audio content written to file output.mp3')
+        return response.audio_content
 
     def get_ai_response(self, input_file):
         parameters = {
@@ -73,5 +75,19 @@ class Chatbot():
         except InvalidArgument:
             print(InvalidArgument)
             return None
-        self.text_to_speech(response.text)
+        status = self.text_to_speech(response.text)
+        return response.text
+    
+    def ask_chat(self, input_text):
+        parameters = {
+            "temperature": 0.8,
+            "max_output_tokens": 256,
+            "top_p": 0.8,
+            "top_k": 40
+        }
+        try:
+            response = self.chat.send_message(input_text, **parameters)
+        except InvalidArgument:
+            print(InvalidArgument)
+            return None
         return response.text
