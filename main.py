@@ -1,16 +1,9 @@
-from flask import Flask, render_template, url_for, request, flash, redirect, send_file, send_from_directory
-from werkzeug.utils import secure_filename
-# from chatbot import get_ai_response
+from flask import Flask, render_template, url_for, request, flash, redirect
 from improved_chatbot import Chatbot
-import os
 import subprocess
-
-UPLOAD_FOLDER = os.path.join("static", "uploads")
-# ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
 app.secret_key = 'the random string'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 google_chatbot = Chatbot()
 
 
