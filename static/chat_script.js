@@ -128,7 +128,7 @@ if (navigator.mediaDevices.getUserMedia) {
         e.target.closest(".response").remove();
       }
       
-      window.addEventListener('keydown', function(e) {
+      window.addEventListener('keyup', function(e) {
         if (e.key == "Delete") {
             chatlog.lastChild.lastChild.lastChild.click()
             console.log('Delete pressed');
