@@ -12,6 +12,6 @@ Authors: Will Boccard
 
 ## Launch Server
 
-    $ python app.py
+    $ python main.py
 
 Then open browser to localhost:5000 and enable microphone.
