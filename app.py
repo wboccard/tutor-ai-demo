@@ -56,16 +56,9 @@ def get_speech():
     audio = google_chatbot.text_to_speech(request_json['text_to_speech'])
     return audio
 
-@app.route('/<audio_file_name>')
-def returnAudioFile(audio_file_name):
-    # path_to_audio_file = os.path.join(app.config['UPLOAD_FOLDER'], audio_file_name)
-    return send_from_directory(app.config['UPLOAD_FOLDER'], audio_file_name)
-    # return send_file(
-    #     path_to_audio_file,
-    #     mimetype="audio/mp3",
-    #     as_attachment=True,
-    #     download_name="output.mp3"
-    # )
+# @app.route('/<audio_file_name>')
+# def returnAudioFile(audio_file_name):
+#     return send_from_directory(app.config['UPLOAD_FOLDER'], audio_file_name)
 
 if __name__ == "__main__":
     app.run(debug=True)
