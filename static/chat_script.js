@@ -43,7 +43,7 @@ if (navigator.mediaDevices.getUserMedia) {
       record.disabled = false;
     }
     
-    window.addEventListener('keydown', function(e) {
+    window.addEventListener('keyup', function(e) {
       if (e.key == " ") {
           if (!record.disabled){
             record.click()

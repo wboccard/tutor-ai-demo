@@ -1,7 +1,18 @@
 body, html {
-  margin: 100;
+  margin: 0;
   font-family: sans-serif;
+  color:#F9C83A;
   background-color: lightblue;
+  background: url("/static/css/Background_Retouched.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a, a:visited, a:hover, a:active {
+  color: white;
+  text-decoration: none;
 }
 
 .content {
@@ -10,7 +21,10 @@ body, html {
 }
 
 table, td, th {
-  border: 1px solid #aaa;
+  /* border: 1px solid #aaa; */
+  background-color: #F9C83A;
+  color: white;
+  border-radius: 25px;
 }
 
 table {
@@ -20,6 +34,8 @@ table {
 
 th {
   height: 30px;
+  background-color: #F3443E;
+  border-radius: 20px 20px 0px 0px;
 }
 
 td {
@@ -33,4 +49,98 @@ td {
 
 #content {
   width: 70%;
+}
+
+#startButton {
+  margin-left:10%; 
+  width:80%;
+  background-color: #F9C83A;
+  color: white;
+  text-align: center;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  font-size: 28px;
+  cursor: pointer; /* add this line */
+}
+
+#startButton:hover {
+  background-color: #F3443E;
+}
+
+.record {
+  margin-left:10%;
+  width:80%;
+  text-align: center;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer; /* add this line */
+}
+
+.stop {
+  margin-left:10%; 
+  width:80%;
+  text-align: center;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer; /* add this line */
+}
+
+.material-icons{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333; */
+}
+
+li {
+  float: left;
+  margin: auto;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #F3443E;
+  border-radius: 25px;
+}
+
+#centerBox {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%); /* Firefox */
+  -ms-transform: translate(-50%, -50%);  /* IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* Safari and Chrome*/
+  -o-transform: translate(-50%, -50%); /* Opera */
+  transform: translate(-50%, -50%);
+
+  /* optional size in px or %: */
+  /* margin: -100px 0 0 -150px; */
+  /* width: 100px; */
+  /* height: 100px; */
+}
+
+#navigation {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: #F9C83A; 
+  color:#F3443E;
+  border-radius: 25px;
 }

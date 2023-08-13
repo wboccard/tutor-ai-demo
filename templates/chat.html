@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content=""ie-edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Google Tutor AI</title>
+  </head>
+  <body>
+    <div id="centerBox">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" style="text-align:center" colspan="2">
+              <h2>Your Tutor: Miles the Astronomer</h2>
+              <p>I am Miles, an astronomer who is here to help you learn about the solar system.</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="chat-log">
+          <tr>
+            <td>
+              Press Spacebar to start asking your question. Push it again when you're done. The AI will respond automatically!
+              Delete any messages by pressing the Delete button!
+            </td>
+            <td>
+              <div id="buttons">
+                <button class="record">Record</button>
+                <button class="stop">Stop</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   
+
+    <div id="navigation">
+      <ul>
+        <li><a href="{{url_for('index')}}"><i class="material-icons">home</i> Home</a></li>
+        <li><a href="#train"> <i class="material-icons">tune</i> Personalization</a></li>
+        <li><a href="#setting"> <i class="material-icons">settings</i> Settings</a></li>
+        <li><a href="#support"> <i class="material-icons">support_agent</i> Support</a></li>
+      </ul>
+    </div>
+    <script src="{{ url_for('static', filename='chat_script.js') }}"></script>
+  </body>
+</html>

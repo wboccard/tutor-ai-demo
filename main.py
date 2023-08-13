@@ -11,6 +11,10 @@ google_chatbot = Chatbot()
 def index():
     return render_template("index.html")
 
+@app.route("/chat")
+def chat():
+    return render_template("chat.html")
+
 @app.route("/audioUpload", methods=["POST"])
 def print_audio():
     if 'file' not in request.files:
