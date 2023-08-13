@@ -44,6 +44,17 @@ td {
   padding: 5px;
 }
 
+/* tr:nth-child(n + 9) {
+  display: none;
+} */
+
+/* table tr:nth-child(odd) {
+  background-color: #F9C83A;
+}
+table tr:nth-child(even) {
+  background-color: #F3443E;
+} */
+
 .form {
   margin-top: 20px;
 }
@@ -130,6 +141,8 @@ li a:hover {
   -o-transform: translate(-50%, -50%); /* Opera */
   transform: translate(-50%, -50%);
 
+  max-height: 30em; 
+  overflow: auto; 
   /* optional size in px or %: */
   /* margin: -100px 0 0 -150px; */
   /* width: 100px; */
@@ -164,4 +177,8 @@ li a:hover {
   border-radius: 10px;
   font-size: 28px;
   cursor: pointer; /* add this line */
+}
+
+#char_submit:hover{
+  background-color: #F3443E;
 }
