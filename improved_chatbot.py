@@ -16,7 +16,7 @@ CHARACTERS = {
                     output_text="""Very good question. Mars has two moons, Phobos and Deimos. They are very small and irregularly shaped. Phobos is the larger of the two moons and is about 17 miles (27 kilometers) in diameter. Deimos is about 12 miles (19 kilometers) in diameter. Both moons are thought to be captured asteroids."""
                 )
         ],
-        'voice': "en-US-Standard-D",
+        'voice': "en-US-Studio-M",
     },
     'Cathy':{
         'character_name': "Cathy the Deep Sea Diver",
@@ -29,7 +29,7 @@ CHARACTERS = {
                     output_text="""Great question. The average depth of the ocean is about 3,688 meters. I've only ever gone down about 40 meters. An ocean that deep is sure to be full of adventures! Isn't that crazy?"""
                 )
         ],
-        'voice': "en-US-Standard-C",
+        'voice': "en-US-Studio-O",
     },
 }
 
