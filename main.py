@@ -1,10 +1,10 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
-from improved_chatbot import Chatbot
+from improved_chatbot import Chatbot, CHARACTERS
 import subprocess
 
 app = Flask(__name__)
 app.secret_key = 'the random string'
-google_chatbot = Chatbot()
+google_chatbot = Chatbot('Miles')
 
 
 @app.route("/")
@@ -13,7 +13,20 @@ def index():
 
 @app.route("/chat")
 def chat():
-    return render_template("chat.html")
+    return render_template("chat.html", 
+                           character_name=CHARACTERS[google_chatbot.character]['character_name'], 
+                           character_intro=CHARACTERS[google_chatbot.character]['character_intro'])
+
+@app.route("/personalization")
+def personalization():
+    return render_template("personalization.html")
+
+@app.route("/character")
+def character():
+    selected_character = request.args.get('character')
+    print(selected_character)
+    google_chatbot.reset_character(selected_character)
+    return redirect(url_for('chat'))
 
 @app.route("/audioUpload", methods=["POST"])
 def print_audio():

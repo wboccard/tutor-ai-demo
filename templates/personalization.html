@@ -10,27 +10,24 @@
   </head>
   <body>
     <div id="centerBox">
-      <h1 style="font-size: 50px; text-align: center;">
-        Tutor AI Chatbot
-      </h1>
-      <p style="font-size: 30px; text-align: center; font-style: italic;">
-        Step up your lifestyle with adaptive learning!
-      </p>
-  
-      <div id="startButton">
-        <a href="{{url_for('chat')}}">
-          Start!
-        </a>
-      </div>
+      <form action="/character" id="char_select">
+        <label for="character">Please select your preferred tutor:</label>
+        <select name="character" id="character">
+          <option value="Miles">Miles the Astronomer</option>
+          <option value="Cathy">Cathy the Diver</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit" id="char_submit">
+      </form>  
     </div>
-   
-
     <div id="navigation">
       <ul>
+        <li><a href="{{url_for('index')}}"><i class="material-icons">home</i> Home</a></li>
         <li><a href="{{url_for('personalization')}}"> <i class="material-icons">tune</i> Personalization</a></li>
         <li><a href="#setting"> <i class="material-icons">settings</i> Settings</a></li>
         <li><a href="#support"> <i class="material-icons">support_agent</i> Support</a></li>
       </ul>
     </div>
+    <script src="{{ url_for('static', filename='chat_script.js') }}"></script>
   </body>
 </html>

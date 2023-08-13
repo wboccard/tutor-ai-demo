@@ -14,8 +14,8 @@
         <thead>
           <tr>
             <th scope="col" style="text-align:center" colspan="2">
-              <h2>Your Tutor: Miles the Astronomer</h2>
-              <p>I am Miles, an astronomer who is here to help you learn about the solar system.</p>
+              <h2>Your Tutor: {{character_name}}</h2>
+              <p>{{character_intro}}</p>
             </th>
           </tr>
         </thead>
@@ -40,7 +40,7 @@
     <div id="navigation">
       <ul>
         <li><a href="{{url_for('index')}}"><i class="material-icons">home</i> Home</a></li>
-        <li><a href="#train"> <i class="material-icons">tune</i> Personalization</a></li>
+        <li><a href="{{url_for('personalization')}}"> <i class="material-icons">tune</i> Personalization</a></li>
         <li><a href="#setting"> <i class="material-icons">settings</i> Settings</a></li>
         <li><a href="#support"> <i class="material-icons">support_agent</i> Support</a></li>
       </ul>

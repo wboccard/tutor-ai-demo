@@ -53,8 +53,8 @@ td {
 }
 
 #startButton {
-  margin-left:10%; 
-  width:80%;
+  margin-left:25%; 
+  width:50%;
   background-color: #F9C83A;
   color: white;
   text-align: center;
@@ -144,4 +144,24 @@ li a:hover {
   background-color: #F9C83A; 
   color:#F3443E;
   border-radius: 25px;
+}
+
+#char_select {
+  font-size: x-large;
+}
+
+#character{
+  font-size: x-large;
+}
+
+#char_submit {
+  margin-left:25%; 
+  width:50%;
+  background-color: #F9C83A;
+  color: white;
+  text-align: center;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  font-size: 28px;
+  cursor: pointer; /* add this line */
 }
